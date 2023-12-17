@@ -1,28 +1,15 @@
-# 해당 워크플로우의 이름
 name: github action tag release
 
-# 어떤 조건에서 이 워크플로우를 실행시킬 것인가? 를 정의하는 곳
-# main 브랜치에 push 또는 pull request가 올 경우 실행
 on:
   push:
     branches:
       - main
-
-# 워크플로우는 여러개의 job으로 구성
-# job들은 병렬적으로 실행되며 순서가 순차적이지 않으니 필요하면 id를 지정해야함
 jobs:
-	# job의 id를 가지며 문자열이어야 함
-	# 여기서 'release' 이름의 job_id를 정의
   release:
-		# 해당 job의 이름 설정
     name: Release
-		# 어떤 OS에서 실행될지 정의
     runs-on: ubuntu-latest
 
-		# steps의 uses는 어떤 액션을 사용할지 지정함. 이미 만들어진 액션을 사용할 때 지정.
-		# job 안에서 순차적으로 실행되는 프로세스 단위가 step
     steps:
-			# step의 이름 지정
       - name: Bump version and push tag
         id: tag_version
         uses: mathieudutour/github-tag-action@v6.1
