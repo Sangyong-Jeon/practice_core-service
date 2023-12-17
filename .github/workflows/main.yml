@@ -8,7 +8,11 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
-
+    permissions:
+      packages: write
+      contents: write
+      id-token: write
+      
     steps:
       - name: Bump version and push tag
         id: tag_version
