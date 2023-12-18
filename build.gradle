@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'com.example'
-version = '0.2.2'
+version = '0.2.3'
 
 java {
     sourceCompatibility = '17'
@@ -20,6 +20,7 @@ configurations {
 
 repositories {
     mavenCentral()
+    maven { url "https://jitpack.io" }
 }
 
 dependencyManagement {
@@ -40,7 +41,7 @@ publishing {
         maven(MavenPublication) {
             groupId = 'com.github.Sangyoun-Jeon'
             artifactId = 'practice_core-service'
-            version = '0.2.2'
+            version = '0.2.3'
 
             from components.java
         }
