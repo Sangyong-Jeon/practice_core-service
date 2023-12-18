@@ -6,7 +6,7 @@ plugins {
 }
 
 group = 'com.example'
-version = '0.2.0'
+version = '0.2.2'
 
 java {
     sourceCompatibility = '17'
@@ -40,7 +40,7 @@ publishing {
         maven(MavenPublication) {
             groupId = 'com.github.Sangyoun-Jeon'
             artifactId = 'practice_core-service'
-            version = '0.2.1'
+            version = '0.2.2'
 
             from components.java
         }
