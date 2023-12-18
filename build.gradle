@@ -38,9 +38,9 @@ dependencies {
 publishing {
     publications {
         maven(MavenPublication) {
-            groupId = 'com.example.coreservice'
-            artifactId = 'core-service'
-            version = '0.2.0'
+            groupId = 'com.github.Sangyoun-Jeon'
+            artifactId = 'practice_core-service'
+            version = '0.2.1'
 
             from components.java
         }
