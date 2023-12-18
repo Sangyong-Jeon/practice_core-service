@@ -1,8 +1,8 @@
 plugins {
-    id 'java'
-    id 'org.springframework.boot' version '3.2.0' apply false
-    id 'io.spring.dependency-management' version '1.1.4'
+    id 'java-library'
     id 'maven-publish'
+    id 'io.spring.dependency-management' version '1.1.4'
+    id 'org.springframework.boot' version '3.2.0' apply false
 }
 
 group = 'com.example'
@@ -39,8 +39,8 @@ dependencies {
 publishing {
     publications {
         maven(MavenPublication) {
-            groupId = 'com.github.Sangyoun-Jeon'
-            artifactId = 'practice_core-service'
+            groupId = 'com.example.coreservice'
+            artifactId = 'core-service'
             version = '0.2.3'
 
             from components.java
